@@ -7,20 +7,15 @@ function App() {
 	useEffect(() => {
 		let pageNum = 11;
 
-		fetch(
-			`https://api.pokemontcg.io/v2/cards?select=id,name,images&page=${pageNum}`
-		)
+		fetch(`https://api.pokemontcg.io/v2/cards?select=id,name,images&page=11`)
 			.then(function (response) {
 				return response.json();
 			})
 
 			.then(function (response) {
 				const data = response.data;
-				console.log(data);
-
 				let filtered = data.filter((item) => item.id.includes("base"));
-				console.log(filtered);
-				setPokeData([...pokeData, ...filtered]);
+				setPokeData([...filtered]);
 			})
 
 			.catch(function (err) {
@@ -29,11 +24,11 @@ function App() {
 	}, []);
 
 	return (
-		<>
+		<div className="cardContainer">
 			{pokeData.map((item) => {
 				return <img key={item.id} src={item.images.small} alt="" />;
 			})}
-		</>
+		</div>
 	);
 }
 
