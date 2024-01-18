@@ -1,26 +1,15 @@
 import { useEffect, useState } from "react";
+import getData from "./components/getData";
 import "./App.css";
 
 function App() {
 	const [pokeData, setPokeData] = useState([]);
+	const [cards, setCards] = useState([]);
 
 	useEffect(() => {
-		let pageNum = 11;
-
-		fetch(`https://api.pokemontcg.io/v2/cards?select=id,name,images&page=11`)
-			.then(function (response) {
-				return response.json();
-			})
-
-			.then(function (response) {
-				const data = response.data;
-				let filtered = data.filter((item) => item.id.includes("base"));
-				setPokeData([...filtered]);
-			})
-
-			.catch(function (err) {
-				console.log(err);
-			});
+		(async () => {
+			setPokeData(await getData());
+		})();
 	}, []);
 
 	return (
