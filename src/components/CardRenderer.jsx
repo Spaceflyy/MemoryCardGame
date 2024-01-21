@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function CardRenderer({ onClick, cards }) {
+export default function CardRenderer({ cards }) {
 	const [randomCards, setRandomCards] = useState([]);
 
 	function generateNumbers() {
