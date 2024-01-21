@@ -21,7 +21,7 @@ export default function CardRenderer({ cards }) {
 
 	useEffect(() => {
 		generateNumbers();
-	}, []);
+	}, [cards]);
 
 	return (
 		<div className="cardContainer">

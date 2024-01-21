@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { StrictMode, useEffect, useState } from "react";
 import getData from "./components/getData.js";
 import CardRenderer from "./components/CardRenderer";
 import "./App.css";
@@ -14,5 +14,4 @@ function App() {
 
 	return pokeData && <CardRenderer cards={pokeData} />;
 }
-
 export default App;
