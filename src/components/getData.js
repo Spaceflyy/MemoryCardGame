@@ -5,6 +5,6 @@ export default async function getData() {
 	const pokemon = await response.json();
 	const data = pokemon.data;
 	let filtered = data.filter((item) => item.id.includes("base"));
-
+	console.log("API CALL");
 	return filtered;
 }
