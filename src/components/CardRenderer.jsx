@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react";
 let selectedCards = [];
-export default function CardRenderer({ setScore, cards }) {
+export default function CardRenderer({
+	setBestScore,
+	resetScore,
+	setScore,
+	cards,
+}) {
 	const [randomCards, setRandomCards] = useState([]);
 
 	function checkCards(cardId) {
 		if (selectedCards.find((card) => card.id === cardId) !== undefined) {
-			console.log("CARD ALREADY CHOSEN");
+			resetScore();
+			setBestScore();
+			selectedCards = [];
 		} else {
 			selectedCards.push(
 				randomCards[randomCards.findIndex((item) => item.id === cardId)]
 			);
+
 			setScore();
 		}
 	}
