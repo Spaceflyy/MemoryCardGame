@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import getData from "./components/getData.js";
 import CardRenderer from "./components/CardRenderer";
+import icon from "./assets/loadingIcon.svg";
 import "./App.css";
 
 4;
@@ -34,7 +35,10 @@ function App() {
 					/>
 				</>
 			) : (
-				<h1>Loading...</h1>
+				<>
+					<img className="loading" src={icon} alt="Loading Icon" />
+					<h1>Loading...</h1>
+				</>
 			)}
 		</>
 	);

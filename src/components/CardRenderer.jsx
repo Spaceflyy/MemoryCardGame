@@ -50,6 +50,7 @@ export default function CardRenderer({
 					return (
 						<Tilt tiltReverse key={item.id}>
 							<img
+								className="pokeCard"
 								onClick={(e) => {
 									checkCards(e.target.getAttribute("data"));
 									shuffleCards();
