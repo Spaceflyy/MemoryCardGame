@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Tilt from "react-parallax-tilt";
 let selectedCards = [];
 export default function CardRenderer({
 	setBestScore,
@@ -47,16 +48,17 @@ export default function CardRenderer({
 			{randomCards[0] !== undefined &&
 				randomCards.map((item) => {
 					return (
-						<img
-							onClick={(e) => {
-								checkCards(e.target.getAttribute("data"));
-								shuffleCards();
-							}}
-							key={item.id}
-							data={item.id}
-							src={item.images.small}
-							alt=""
-						/>
+						<Tilt tiltReverse key={item.id}>
+							<img
+								onClick={(e) => {
+									checkCards(e.target.getAttribute("data"));
+									shuffleCards();
+								}}
+								data={item.id}
+								src={item.images.small}
+								alt=""
+							/>
+						</Tilt>
 					);
 				})}
 		</div>
