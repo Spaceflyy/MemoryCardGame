@@ -10,6 +10,21 @@ body {
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
+.loadingContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	height: 100dvh;
+}
+#root {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
 .cardContainer {
 	display: flex;
 	flex-wrap: wrap;

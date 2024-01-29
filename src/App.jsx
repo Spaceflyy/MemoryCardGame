@@ -25,8 +25,8 @@ function App() {
 		<>
 			{pokeData.length > 0 ? (
 				<>
-					<h1>Score:{score}</h1>
-					<h1>Best Score:{hiscore}</h1>
+					<p>Score:{score}</p>
+					<p>Best Score:{hiscore}</p>
 					<CardRenderer
 						setBestScore={checkHiscore}
 						resetScore={() => setScore(0)}
@@ -35,10 +35,10 @@ function App() {
 					/>
 				</>
 			) : (
-				<>
+				<div className="loadingContainer">
 					<img className="loading" src={icon} alt="Loading Icon" />
 					<h1>Loading...</h1>
-				</>
+				</div>
 			)}
 		</>
 	);
