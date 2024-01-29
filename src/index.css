@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
+html,
+body {
+	background-size: cover;
+	min-height: 100dvh;
+}
 body {
 	font-family: "Press Start 2P", system-ui;
 	background-image: url("./assets/background.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100dvh;
+	background-position: center center;
 }
 .cardContainer {
 	display: flex;
