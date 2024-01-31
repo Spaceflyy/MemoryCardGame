@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import getData from "./components/getData.js";
 import CardRenderer from "./components/CardRenderer";
 import icon from "./assets/loadingIcon.svg";
+import HowToPlay from "./components/howToPlay.jsx";
 import "./App.css";
 
 4;
@@ -25,8 +26,11 @@ function App() {
 		<>
 			{pokeData.length > 0 ? (
 				<>
-					<p>Score:{score}</p>
-					<p>Best Score:{hiscore}</p>
+					<HowToPlay />
+					<div className="scoreContainer">
+						<p>Score:{score}</p>
+						<p>Best Score:{hiscore}</p>
+					</div>
 					<CardRenderer
 						setBestScore={checkHiscore}
 						resetScore={() => setScore(0)}

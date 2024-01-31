@@ -3,6 +3,8 @@ html,
 body {
 	background-size: cover;
 	min-height: 100dvh;
+	margin: 0;
+	padding: 0;
 }
 body {
 	font-family: "Press Start 2P", system-ui;
@@ -16,21 +18,59 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-
 	height: 100dvh;
 }
-#root {
-	max-width: 1500px;
-	margin: 0 auto;
+.scoreContainer {
+	display: flex;
+	justify-content: space-between;
 	padding: 2rem;
-	text-align: center;
+	width: 80dvw;
+	gap: 2rem;
+}
+#root {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100dvh;
 }
 .cardContainer {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
+	width: 79dvw;
 	justify-content: center;
+	align-items: center;
 	user-select: none;
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+	border-image-slice: 40 fill;
+	border-image-width: 20px;
+	border-image-source: url("./assets/border2.png");
+	border-image-repeat: repeat;
+	padding: 2rem;
+	animation: menu-zoom 0.5s ease-in-out;
+}
+
+input[type="button"] {
+	height: 40px;
+	width: 100px;
+}
+
+.menuContainer {
+	display: flex;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+	background-color: rgba(59, 59, 59, 0.5);
 }
 
 .pokeCard {
@@ -56,5 +96,16 @@ body {
 	}
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+@keyframes menu-zoom {
+	from {
+		transform: scale(0%);
+		opacity: 0%;
+	}
+	to {
+		transform: scale(100%);
+		opacity: 100%;
 	}
 }
