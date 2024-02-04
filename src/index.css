@@ -127,6 +127,7 @@ input[type="button"] {
 	letter-spacing: 2px;
 	font-family: "Pokemon Solid", sans-serif;
 	margin: 0;
+	font-size: 1.5rem;
 }
 .header {
 	max-height: max-content;
