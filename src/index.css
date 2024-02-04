@@ -128,11 +128,13 @@ input[type="button"] {
 	font-family: "Pokemon Solid", sans-serif;
 	margin: 0;
 }
+.titleContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .header {
 	max-height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 100%;
 	background: radial-gradient(
 		rgba(223, 223, 223, 0.918),

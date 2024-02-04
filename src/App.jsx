@@ -27,10 +27,11 @@ function App() {
 			{pokeData.length > 0 ? (
 				<>
 					<div className="header">
-						<img src={icon} alt="Icon" />
-						<h1>Pokédex Recall </h1>
-
-						<img src={icon} alt="Icon" />
+						<div className="titleContainer">
+							<img src={icon} alt="Icon" />
+							<h1>Pokédex Recall </h1>
+							<img src={icon} alt="Icon" />
+						</div>
 					</div>
 					<HowToPlay />
 					<div className="scoreContainer">
