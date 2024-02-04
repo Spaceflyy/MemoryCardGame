@@ -27,16 +27,14 @@ function App() {
 			{pokeData.length > 0 ? (
 				<>
 					<div className="header">
-						<div className="titleContainer">
-							<img src={icon} alt="Icon" />
-							<h1>Pokédex Recall </h1>
-							<img src={icon} alt="Icon" />
-						</div>
+						<img src={icon} alt="Icon" />
+						<h1>Pokédex Recall </h1>
+						<img src={icon} alt="Icon" />
 					</div>
 					<HowToPlay />
 					<div className="scoreContainer">
 						<p>Score:{score}</p>
-						<p>Best Score:{hiscore}</p>
+						<p>Best Score:{hiscore}/15</p>
 					</div>
 					<CardRenderer
 						setBestScore={checkHiscore}
