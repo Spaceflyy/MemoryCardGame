@@ -3,7 +3,6 @@ import getData from "./components/getData.js";
 import CardRenderer from "./components/CardRenderer";
 import icon from "./assets/loadingIcon.svg";
 import HowToPlay from "./components/howToPlay.jsx";
-import "./App.css";
 
 4;
 function App() {

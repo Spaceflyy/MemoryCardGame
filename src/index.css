@@ -56,11 +56,22 @@ body {
 	border-image-repeat: repeat;
 	padding: 2rem;
 	animation: menu-zoom 0.5s ease-in-out;
+	align-items: center;
 }
 
-input[type="button"] {
-	height: 40px;
-	width: 100px;
+.menu input[type="button"] {
+	font-size: 0.6rem;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(233, 233, 233);
+	height: 30px;
+	width: 80px;
+	font-family: inherit;
+}
+
+.menu input[type="button"]:active {
+	border: solid 1px;
+	background-color: rgb(190, 190, 190);
 }
 
 .menuContainer {
